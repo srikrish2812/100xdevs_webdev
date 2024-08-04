@@ -36,3 +36,74 @@ function loopSum(num){
 }
 
 console.log(loopSum(10));
+
+
+let user = {
+    name: "John Doe",
+    age: 2,
+    gender: "attack helicopter"
+}
+
+function greet1(user){
+    console.log("Hi " + user.name + ", your age is " + user.age);
+}
+greet1(user);
+
+function greet2(user){
+    let pronoun;
+    if(user.gender==='male'){
+         pronoun = "Mr "
+    }
+    else if (user.gender==='female'){
+        pronoun = "Mrs "
+    }
+    else{
+        pronoun = user.gender +" "
+    }
+    console.log("Hi "+pronoun+user.name+", your age is "+user.age);
+}
+greet2(user);
+
+
+function voteEligibility(user){
+    if(user.age>18){
+        console.log(user.name+" is eligible to vote.");
+    }
+    else{
+        console.log(user.name+" is not eligible to vote.");
+    }
+}
+voteEligibility(user);
+
+
+let arrobj = [
+    {
+        name:"John",
+        age:20,
+        gender:"male"
+    },
+    {
+        name:"Doe",
+        age:19,
+        gender:'male'
+    },
+    {
+        name:"Claire",
+        age:27,
+        gender:'female'
+    }
+]
+function arrObjects(arr){
+    let newArr = []
+    for(let i=0;i<arr.length;i++){
+        if(arr[i].age>18 && arr[i].gender==='male'){
+            newArr.push(arr[i])
+        }
+    }
+    console.log(newArr);
+    
+}
+
+arrObjects(arrobj);
+
+// Using filter method to solve above question
