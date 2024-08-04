@@ -111,6 +111,25 @@ arrObjects(arrobj);
 // filter method returns a new_array with the elements
 // that pass the callback function test
 
+
+let arrobj = [
+    {
+        name:"John",
+        age:20,
+        gender:"male"
+    },
+    {
+        name:"Doe",
+        age:19,
+        gender:'male'
+    },
+    {
+        name:"Claire",
+        age:27,
+        gender:'female'
+    }
+]
+
 let filteredArr = arrobj.filter(function(person){
     return person.age>18 && person.gender==='male';
 })
