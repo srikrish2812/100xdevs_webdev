@@ -100,6 +100,7 @@ function arrObjects(arr){
             newArr.push(arr[i])
         }
     }
+    console.log("Using for loop: ");
     console.log(newArr);
     
 }
@@ -107,3 +108,11 @@ function arrObjects(arr){
 arrObjects(arrobj);
 
 // Using filter method to solve above question
+// filter method returns a new_array with the elements
+// that pass the callback function test
+
+let filteredArr = arrobj.filter(function(person){
+    return person.age>18 && person.gender==='male';
+})
+console.log("Using filter method: ");
+console.log(filteredArr);
