@@ -112,7 +112,7 @@ arrObjects(arrobj);
 // that pass the callback function test
 
 
-let arrobj = [
+arrobj = [
     {
         name:"John",
         age:20,
