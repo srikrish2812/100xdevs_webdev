@@ -1,0 +1,7 @@
+This file is created using VIM on the terminal app.
+1. Varanasi
+2. Hyderabad
+3. Bangalore
+4. Vijayawada
+5. Mumbai
+6. Delhi
