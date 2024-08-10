@@ -1,8 +1,10 @@
 // 1. I/O tasks 
 // assignment  - try to create a promisified version of setimeout, fetch, fs.readfile
 
-const { log } = require("console");
-const fs = require("fs");
+
+import { readFile, readFileSync } from "fs";
+
+
 
 // const contentsA = fs.readFileSync("a.txt", 'utf-8');
 // console.log(contentsA);
@@ -15,8 +17,10 @@ function print(err, data){
 }
 
 // readFile calls the callback function print only after it has read the text 
-fs.readFile("a.txt", 'utf-8', print) // asynchronously
+readFile("a.txt", 'utf-8', print) // asynchronously
 
-fs.readFile("b.txt", 'utf-8', print) // asynchronously
+readFile("b.txt", 'utf-8', print) // asynchronously
 
 console.log("Done! 2");
+
+// write a promise today
