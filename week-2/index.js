@@ -14,7 +14,7 @@ function print(err, data){
     console.log(data);
 }
 
-
+// readFile calls the callback function print only after it has read the text 
 fs.readFile("a.txt", 'utf-8', print) // asynchronously
 
 fs.readFile("b.txt", 'utf-8', print) // asynchronously
