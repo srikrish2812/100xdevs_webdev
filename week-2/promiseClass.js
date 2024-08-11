@@ -2,6 +2,8 @@
 // setTimeout promises that it runs the function after delay ms.
 // Promises are a syntactically superior way of writing callback
 
+import {readFile} from "fs"
+
 function setTimeoutPromisified(ms){
     return new Promise((resolve)=> setTimeout(resolve, ms));
 }
@@ -20,3 +22,5 @@ function random(){
 
 let q = new Promise(random);
 console.log(q);
+
+// create the promisifies version of fs.readFile, fs.writeFile, 
