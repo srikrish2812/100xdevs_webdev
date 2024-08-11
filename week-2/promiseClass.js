@@ -1,26 +1,33 @@
 // promise class gives u a promise that it will return u something in the future
 // setTimeout promises that it runs the function after delay ms.
 // Promises are a syntactically superior way of writing callback
-
-import {readFile} from "fs"
-
-function setTimeoutPromisified(ms){
-    return new Promise((resolve)=> setTimeout(resolve, ms));
-}
+const fs = require("fs");
 
 
-function callback(){
-    console.log("sometime has passed");
-}
 
-let p = setTimeoutPromisified(3000);
-console.log(p);
+// let p = setTimeoutPromisified(3000);
+// console.log(p);
 
-function random(){
 
-}
-
-let q = new Promise(random);
-console.log(q);
 
 // create the promisifies version of fs.readFile, fs.writeFile, 
+
+function readTheFile(sendValue){
+    
+    fs.readFile('a.txt', 'utf-8', function(err,data) {
+        sendValue(data);
+    })
+}
+
+
+function readFile(fileName){
+    return new Promise(readTheFile);
+}
+
+const p = readFile();
+
+function callback(contents){
+    console.log(contents);
+}
+
+p.then(callback);
