@@ -15,6 +15,7 @@ const fs = require("fs");
 function readTheFile(sendValue){
     
     fs.readFile('a.txt', 'utf-8', function(err,data) {
+        data = data.trim();
         sendValue(data);
     })
 }
